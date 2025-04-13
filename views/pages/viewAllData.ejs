@@ -1,0 +1,119 @@
+<%- include('../partials/adminheader') %>
+    <!-- ============================================================== -->
+    <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Page wrapper  -->
+    <!-- ============================================================== -->
+    <div class="page-wrapper" style=" background: linear-gradient(131deg,rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);">
+        <!-- ============================================================== -->
+        <!-- Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <div class="page-breadcrumb">
+            <div class="row">
+                <div class="col-12 d-flex no-block align-items-center">
+                    <h4 class="page-title text-white">All Products Data Details</h4>
+                    <div class="ml-auto text-right">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a class="text-decoration-none text-white fw-bold" href="#">Home</a></li>
+                                <li class="breadcrumb-item active text-white fw-bold" aria-current="page">Library</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+            <!-- ============================================================== -->
+            <!-- Start Page Content -->
+            <!-- ============================================================== -->
+            <h2 class="text-white">Category Cards</h2>
+            <div class="row">
+                <% categories.forEach((cat, index) => { %>
+                    <div class="col-md-3 mb-4"> <!-- 3 columns per row, adjust as needed -->
+                        <div class="card h-100 p-4 rounded">
+                            <img src="/<%= cat.image %>" class="card-img-top" alt="<%= cat.name %>" style="height: 200px; object-fit: contain;">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= cat.name %></h5>
+                                <p class="card-text">Price: ₹999</p> <!-- Static Price -->
+                                <p class="card-text">Rating: ⭐⭐⭐⭐☆</p> <!-- Static Rating -->
+                            </div>
+                            <div class="card-footer text-center">
+                                <a href="/category/delete/<%= cat.id %>" class="btn btn-danger btn-sm">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+            
+            <br><br>
+            
+            <h2 class="text-white">Subcategory Cards</h2>
+            <div class="row">
+                <% subCategories.forEach((sub, index) => { %>
+                    <div class="col-md-3 mb-4">
+                        <div class="card h-100 p-4 rounded">
+                            <img src="/<%= sub.image %>" class="card-img-top" alt="<%= sub.name %>" style="height: 200px; object-fit: contain;">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= sub.name %></h5>
+                                <p class="card-text">Price: ₹799</p> <!-- Static Price -->
+                                <p class="card-text">Rating: ⭐⭐⭐☆☆</p> <!-- Static Rating -->
+                            </div>
+                            <div class="card-footer text-center">
+                                <a href="/subcategory/delete/<%= sub.id %>" class="btn btn-danger btn-sm">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+            
+            <br><br>
+            
+            <h2 class="text-white">Extra Category Cards</h2>
+            <div class="row">
+                <% extraCategories.forEach((extra, index) => { %>
+                    <div class="col-md-3 mb-4">
+                        <div class="card h-100 p-4 rounded">
+                            <img src="/<%= extra.image %>" class="card-img-top" alt="<%= extra.name %>" style="height: 200px; object-fit: contain;">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= extra.name %></h5>
+                                <p class="card-text">Price: ₹499</p> <!-- Static Price -->
+                                <p class="card-text">Rating: ⭐⭐⭐⭐⭐</p> <!-- Static Rating -->
+                            </div>
+                            <div class="card-footer text-center">
+                                <a href="/extracategory/delete/<%= extra.id %>" class="btn btn-danger btn-sm">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+            
+
+            <!-- ============================================================== -->
+            <!-- End PAge Content -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Right sidebar -->
+            <!-- ============================================================== -->
+            <!-- .right-sidebar -->
+            <!-- ============================================================== -->
+            <!-- End Right sidebar -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+<%- include('../partials/adminfooter') %>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
