@@ -43,7 +43,7 @@ A Node.js and EJS-based admin panel to manage product categories, subcategories,
 ![Add Category Screenshot](https://github.com/user-attachments/assets/f0fdab34-a0fb-4aff-b998-de33f9ff5b46)
 
 ### 📋 View All Data
-![View All Screenshot]![image](https://github.com/user-attachments/assets/27ed76b6-a67f-41c8-a229-fe6131cd480a)
+![View All Screenshot](https://github.com/user-attachments/assets/27ed76b6-a67f-41c8-a229-fe6131cd480a)
 
 ### Client Home Page
 ![image](https://github.com/user-attachments/assets/741dac90-3241-40e1-ba6b-3cb472babf77)
